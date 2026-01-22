@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Shop Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <main>
+            <div class="card">
+                <header class="card-header">
+                    <nav class="top-nav" aria-label="Shop navigation">
+                        <a class="nav-btn" href="/ini.html">Home</a>
+                        <a class="nav-btn" href="/shop.html">Shop</a>
+                        <a class="nav-btn" href="/index.html">Logout</a>
+                    </nav>
+                    <h1>The Good Shop</h1>
+                    <p class="lead">Spend your coins on little desires.</p>
+                    <div class="counters">
+                        <span>XP: <strong id="xp-count">0</strong></span>
+                        <span style="margin-left:12px">Coins: <strong id="coins-count">0</strong></span>
+                    </div>
+                </header>
+
+                <section id="shop-items" class="shop-grid">
+                    <article class="item card">
+                        <h3>1 Beer</h3>
+                        <p class="muted">You can drink one beer with your friends</p>
+                        <div class="item-bottom">
+                            <span class="price">10 Coins</span>
+                            <button class="buy-btn" data-buy-id="beer" data-price="10">Buy</button>
+                        </div>
+                    </article>
+
+                    <article class="item card">
+                        <h3>Cheat meal</h3>
+                        <p class="muted">You can indulge in a cheat meal</p>
+                        <div class="item-bottom">
+                            <span class="price">20 Coins</span>
+                            <button class="buy-btn" data-buy-id="cheatmeal" data-price="20">Buy</button>
+                        </div>
+                    </article>
+
+                    <article class="item card">
+                        <h3>Party</h3>
+                        <p class="muted">You can finally party (don't drink too much)</p>
+                        <div class="item-bottom">
+                            <span class="price">30 Coins</span>
+                            <button class="buy-btn" data-buy-id="party" data-price="30">Buy</button>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </main>
+        <script src="app.js"></script>
+        <footer>
+            <p>&copy; 2025 Be Better. App made with ❤️ by Guiu Carol</p>
+        </footer>
+    </body>
+</html>

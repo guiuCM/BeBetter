@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Be Better</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <main>
+            <div class="card">
+                <header class="card-header">
+                    <h1>Welcome to BeBetter</h1>
+                    <p class="lead">Your journey to self-improvement starts here.</p>
+                </header>
+
+                <section id="login">
+                    <form id="login-form" action="/login" method="POST">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <div class="actions">
+                            <button type="submit">Login</button>
+                            <a class="nav-btn" href="/register.html">Register</a>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+        <script src="app.js"></script>
+        <footer>
+            <p>&copy; 2025 BeBetter. App made with ❤️ by Guiu Carol</p>
+        </footer>
+    </body>
+</html>

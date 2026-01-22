@@ -1,0 +1,246 @@
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Make page use a column flex layout so footer can stay at the bottom
+   when content is short, and naturally follow content when it's long. */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+main {
+    /* allow main content to grow and push footer to the bottom */
+    flex: 1 0 auto;
+}
+
+#login {
+    margin-top: 60px;
+}
+
+/* Main content card */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px;
+}
+
+main > .card {
+    width: 100%;
+    max-width: 720px;
+    background: #fff;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    box-sizing: border-box;
+}
+
+/* Card header and nav */
+.card-header {
+    margin-bottom: 18px;
+}
+
+.top-nav {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #2b8aef;
+    font-weight: 700;
+}
+
+.nav-btn:hover { background: rgba(43,138,239,0.06); }
+
+.lead {
+    color: #666;
+    margin-top: 6px;
+}
+
+/* Stats */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    margin: 18px 0 24px;
+}
+
+.stat {
+    background: linear-gradient(180deg, #fbfdff, #f6f9ff);
+    border: 1px solid rgba(43,138,239,0.06);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat .label { display: block; color: #777; font-size: 0.85rem; }
+.stat .value { display: block; font-size: 1.2rem; font-weight: 700; color: #222; }
+
+/* Tasks */
+.tasks h2 { margin-top: 0; }
+.task-list { list-style: none; padding: 0; margin: 8px 0 0; }
+.tasks-header-row { display:flex; gap:12px; align-items:center; justify-content:flex-start; margin-bottom:8px; }
+.add-task-btn {
+    background: #2b8aef;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+.add-task-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.task-list li {
+    padding: 10px 12px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    background: #fff;
+}
+.task-list li label { cursor: pointer; }
+.task-list li { pointer-events: auto; }
+.task-list.completed li { opacity: 0.75; text-decoration: line-through; }
+
+/* Task pool panel */
+.task-pool { position: fixed; right: 20px; top: 100px; width: 320px; max-width: calc(100% - 40px); background: #fff; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); padding: 16px; z-index: 60; }
+.task-pool.hidden { display: none; }
+.task-pool h3 { margin-top: 0; }
+.task-pool .task-list li { display:flex; justify-content:space-between; align-items:center; }
+.task-pool .add-btn { background: #0abf7a; color: white; border: none; padding: 6px 10px; border-radius: 6px; font-weight:700; }
+.task-pool .add-btn:disabled { opacity:0.6; cursor:not-allowed; }
+
+/* Shop styles */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.item.card {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.muted { color: #666; font-size: 0.95rem; }
+
+.item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.price { font-weight: 700; color: #222; }
+
+.buy-btn {
+    background: #2b8aef;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+.buy-btn:active { transform: translateY(1px); }
+
+/* Login form styles */
+#login form {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#login label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+#login input[type="text"],
+#login input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+#login .actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+}
+
+button[type="submit"] {
+    background: #2b8aef;
+    color: #fff;
+}
+
+button[type="button"] {
+    background: transparent;
+    color: #2b8aef;
+    border: 1px solid #2b8aef;
+}
+
+button:active { transform: translateY(1px); }
+
+/* Footer visual improvements */
+footer {
+    margin-top: auto; /* pushes footer to the bottom when possible */
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+    padding: 18px 12px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
+    border-top: 1px solid rgba(0,0,0,0.04);
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+    h1 { font-size: 1.8em; }
+    main > .card { padding: 20px; }
+    body { padding: 8px; }
+}
+
+footer {
+    margin-top: auto; /* pushes footer to the bottom when possible */
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+}

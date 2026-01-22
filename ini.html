@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Initial Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <main>
+            <div class="card">
+                <header class="card-header">
+                    <nav class="top-nav" aria-label="Main navigation">
+                        <a class="nav-btn" href="/ini.html">Home</a>
+                        <a class="nav-btn" href="/shop.html">Shop</a>
+                        <a class="nav-btn" href="/index.html">Logout</a>
+                    </nav>
+
+                    <h1 id="welcome">Welcome, <span id="welcome-username">Guest</span></h1>
+                    <p class="lead">Be the person you dream of becoming.</p>
+                </header>
+
+                <section class="stats" aria-label="Player stats">
+                    <div class="stat">
+                        <span class="label">Level</span>
+                        <span class="value" id="stat-level">1</span>
+                    </div>
+                    <div class="stat">
+                        <span class="label">XP</span>
+                        <span class="value" id="stat-xp">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="label">Next Level</span>
+                        <span class="value" id="stat-next">100 XP</span>
+                    </div>
+                    <div class="stat">
+                        <span class="label">Coins</span>
+                        <span class="value" id="stat-coins">50</span>
+                    </div>
+                </section>
+
+                <section id="pending-tasks" class="tasks">
+                    <h2>Your Tasks</h2>
+                    <p>You need to focus on the most important tasks (maximum 5)</p>
+                    <div class="tasks-header-row">
+                        <button id="add-task-btn" class="add-task-btn">+ Add Task</button>
+                        <span class="muted">(Up to 5 active tasks)</span>
+                    </div>
+                    <ul class="task-list">
+                        <li data-task-id="task-training">
+                            <label><input type="checkbox"> Training today</label>
+                        </li>
+                        <li data-task-id="task-study">
+                            <label><input type="checkbox"> Study 1 hour</label>
+                        </li>
+                        <li data-task-id="task-read">
+                            <label><input type="checkbox"> Read 10 pages</label>
+                        </li>
+                        <li data-task-id="task-meditate">
+                            <label><input type="checkbox"> Meditate 10 minutes</label>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Task pool panel (hidden by default) -->
+                <div id="task-pool" class="task-pool hidden" aria-hidden="true">
+                    <h3>Available Tasks</h3>
+                    <p>Choose tasks to add to your active list.</p>
+                    <ul id="pool-list" class="task-list">
+                        <!-- items injected by JS -->
+                    </ul>
+                    <div style="text-align:right;"><button id="close-pool" class="buy-btn">Close</button></div>
+                </div>
+
+                <section id="completed-tasks" class="tasks">
+                    <h2>Completed Tasks</h2>
+                    <ul class="task-list completed">
+                        <!-- Completed tasks will be listed here -->
+                    </ul>
+                </section>
+            </div>
+        </main>
+        <script src="app.js"></script>
+        <footer>
+            <p>&copy; 2025 Be Better. App made with ❤️ by Guiu Carol</p>
+        </footer>
+    </body>
+</html>
